@@ -11,22 +11,59 @@
 <body>
     <section class="home">
         <div class="container">
-        <h3>Mock Election</h3>
-        <h1>PRECINCT LIST</h1>
-        <div class="logo_image">
-            <img src="resource/l1.png">
-            <img src="resource/l2.png">
-            <img src="resource/l3.png">
-            <img src="resource/l4.png">
-            <img src="resource/l6.png">
-        </div>
-        <p>Kindly check your name for your designated precinct.</p>
-        <button><a href="p1.html">Precinct 1</a></button>
-        <button><a href="p2.html">Precinct 2</a></button>
-        <button><a href="p3.html">Precinct 3</a></button>
-        <button><a href="p4.html">Precinct 4</a></button>
+        <div class="home_wrapper">
+
+            <div class="left_content">
+                <h1>Mock Election</h1>
+                <h3>precinct allocation</h3>
+                <p>Please take a moment to verify your name in the official list to confirm your designated precinct. </p>
+
+                <div class="logo_image">
+                    <img src="resource/l1.png">
+                    <img src="resource/l2.png">
+                    <img src="resource/l3.png">
+                    <img src="resource/l4.png">
+                    <img src="resource/l6.png">
+                </div>
+            </div>
+
+            <div class="right_content">
+                <div class="div1">
+                    <button class="p1">Precinct 1</button>
+                    <button class="p2">Precinct 2</button>
+                </div>
+                <div  class="div2">
+                    <button class="p3">Precinct 3</button>
+                    <button class="p4">Precinct 4</button>
+                </div>
+            </div >
+        
+        </div >
         </div >
     </section>
+
+<script>
+    const p1 = document.querySelector(".p1");
+    const p2 = document.querySelector(".p2");
+    const p3 = document.querySelector(".p3");
+    const p4 = document.querySelector(".p4");
+
+    p1.addEventListener("click", () => {
+        window.location.href = "p1.html"; // Change to your actual file
+    });
+
+    p2.addEventListener("click", () => {
+        window.location.href = "p2.html";
+    });
+
+    p3.addEventListener("click", () => {
+        window.location.href = "p3.html";
+    });
+
+    p4.addEventListener("click", () => {
+        window.location.href = "p4.html";
+    });
+</script>
 
 </body>
 </html>

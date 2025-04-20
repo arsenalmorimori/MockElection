@@ -128,9 +128,9 @@
         <li> <font class="num"> 111 </font> <font>Valdez, Marcolm Leigh L.                        </font><font class="batch">Batch 6</font></li>
         <li> <font class="num"> 112 </font> <font>Mendoza, Doeyne Kristoff H.                     </font><font class="batch">Batch 6</font></li>
     </ul>
+    <p id="noResult" style="display:none;">Please see other Precincts.</p>
 </div>
-    </div >
-
+</div>
     <script>
         const searchInput = document.getElementById("searchInput");
         const nameList = document.getElementById("nameList");
@@ -138,12 +138,22 @@
 
         searchInput.addEventListener("keyup", function () {
             const filter = searchInput.value.toLowerCase();
+            let hasVisible = false;
+
             for (let i = 0; i < names.length; i++) {
                 let txtValue = names[i].textContent || names[i].innerText;
-                names[i].style.display = txtValue.toLowerCase().includes(filter) ? "" : "none";
+                if (txtValue.toLowerCase().includes(filter)) {
+                    names[i].style.display = "";
+                    hasVisible = true;
+                } else {
+                    names[i].style.display = "none";
+                }
             }
+
+            noResult.style.display = hasVisible ? "none" : "block";
         });
     </script>
+
 
 </body>
 </html>
